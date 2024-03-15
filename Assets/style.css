@@ -43,6 +43,53 @@ button[type="submit"]:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 20px;
+}
+
+.card2{
+    background: linear-gradient(180deg, rgb(53, 100, 202),rgb(47, 160, 117));
+    padding: 50px;
+    box-shadow: 2px 2px 5px;
+    display: flex;
+    margin: 20px;
+    flex-direction: column;
+    position: relative;
+}
+.card3{
+    background: linear-gradient(180deg, rgb(53, 100, 202),rgb(47, 160, 117));
+    padding: 50px;
+    box-shadow: 2px 2px 5px;
+    display: flex;
+
+    margin: 20px;
+    flex-direction: column;
+    position: relative;
+}
+.card4{
+    background: linear-gradient(180deg, rgb(53, 100, 202),rgb(47, 160, 117));
+    padding: 50px;
+    box-shadow: 2px 2px 5px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    position: relative;
+}
+.card5{
+    background: linear-gradient(180deg, rgb(53, 100, 202),rgb(47, 160, 117));
+    padding: 50px;
+    box-shadow: 2px 2px 5px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    
+}
+.card6{
+    background: linear-gradient(180deg, rgb(53, 100, 202),rgb(47, 160, 117));
+    padding: 50px;
+    box-shadow: 2px 2px 5px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
     
 }
 h1{
@@ -65,11 +112,13 @@ p{
     font-weight: bold;
     margin-bottom: 25px;
 }
-.wind-dis{
+.wind-dis .day-dis{
     font-weight: bold;
     margin-bottom: 25px;
 }
 .Weather-emoji{
+    display: flex;
+    flex-direction: column;
     font-size: 8rem;
     margin: 0;
 }
