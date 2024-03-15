@@ -32,7 +32,7 @@ form.addEventListener("submit",async event =>{
 });
 async function getWeatherData(city){
     
-    const apiUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${apikey}`
+    const apiUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${apikey}`
 
     const response = await fetch(apiUrl);
 
