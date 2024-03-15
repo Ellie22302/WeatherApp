@@ -21,7 +21,12 @@ https://stackoverflow.com/questions/19625646/javascript-adding-an-id-attribute-t
 
 ## Installation
 
-No need to install, just run the index.html in browser or open the link at the begining of this Readme
+No need to install, just run the index.html in browser or open the link at the begining of this Readme, Reload page to see saved history.
+
+
+## Usage
+To use go to this website and type in a city, to view saved hit the history dropdown then hit search.
+https://ellie22302.github.io/WeatherApp/
     
 ## Screenshots
 
