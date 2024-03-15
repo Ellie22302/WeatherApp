@@ -10,6 +10,8 @@ const card3 = document.querySelector(".card3");
 const card4 = document.querySelector(".card4");
 const card5 = document.querySelector(".card5");
 const card6 = document.querySelector(".card6");
+const dropdown = document.querySelector(".dropdown-menu");
+
 
 
 form.addEventListener("submit",async event =>{
@@ -20,7 +22,6 @@ form.addEventListener("submit",async event =>{
             try{
                 const weatherData = await getWeatherData(city);
                 disWeather(weatherData);
-                localStorage.setItem("city",city,);
             }
             catch(error){
                 console.error(error);
@@ -40,25 +41,73 @@ async function getWeatherData(city){
 }
 
 
+window.onload=function history(){
+    //   class="dropdown-item"
+    const history1 = document.createElement("a");
+                history1.textContent= localStorage.key(0);
+                history1.classList.add("dropdown-item")
+                dropdown.appendChild(history1)
+                history1.setAttribute("id", "1");
+
+                    const history2 = document.createElement("a");
+                    history2.textContent= localStorage.key(1);
+                    history2.classList.add("dropdown-item")
+                    dropdown.appendChild(history2)
+                    history2.setAttribute("id", "2");
+
+                        const history3 = document.createElement("a");
+                        history3.textContent= localStorage.key(2);
+                        history3.classList.add("dropdown-item")
+                        dropdown.appendChild(history3)
+                        history3.setAttribute("id", "3");
+
+                                const history4 = document.createElement("a");
+                                history4.textContent= localStorage.key(3);
+                                history4.classList.add("dropdown-item")
+                                dropdown.appendChild(history4)
+                                history4.setAttribute("id", "4");
+
+                                    const history5 = document.createElement("a");
+                                    history5.textContent= localStorage.key(4);
+                                    history5.classList.add("dropdown-item")
+                                    dropdown.appendChild(history5)
+                                    history5.setAttribute("id", "5");
+
+                                    // myInput.value = 'Whatever you want!';
+                                    history1.addEventListener("click", async event=>{
+                                        event.preventDefault();
+                                        cityInput.value = localStorage.key(0);
+                                    });
+
+                                    history2.addEventListener("click", async event=>{
+                                        event.preventDefault();
+                                        cityInput.value = localStorage.key(1);
+                                    });
+
+                                    history3.addEventListener("click", async event=>{
+                                        event.preventDefault();
+                                        cityInput.value = localStorage.key(2);
+                                    });
+
+                                    history4.addEventListener("click", async event=>{
+                                        event.preventDefault();
+                                        cityInput.value = localStorage.key(3);
+                                    });
+
+                                    history5.addEventListener("click", async event=>{
+                                        event.preventDefault();
+                                        cityInput.value = localStorage.key(4);
+                                    });
+
+}
 
 async function disWeather(data){
-
-    console.log(data[0]);
-    console.log(data[0].lat);
-    console.log(data[0].lon);
     var lat = data[0].lat;
     var lon = data[0].lon;
     const url2= `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=3e5df3470637ae8ed92dfcd42bd58846`;
     await fetch(url2).then((response) => {
         console.log(response);
         response.json().then((data2) => {
-            console.log(data2.list[0].wind.speed)
-            console.log(data2.list[0].main);
-            console.log(data2.list[0].weather[0]);
-            console.log(data2.list[0].weather[0].description);
-            console.log(data2.list[0].weather[0].id);
-            console.log(data2.list[0].main.temp);
-            console.log(data2.list[0].main.humidity);
                 card.textContent="";
                 card.style.display="flex";
 
@@ -70,7 +119,6 @@ async function disWeather(data){
                 card.appendChild(cityDisplay)
 
                 var emoji1 =data2.list[0].weather[0].id;
-                console.log(emoji1)
                 if (emoji1>= 200 && emoji1 < 300){
                     emoji1 = "⛈";
                 };
@@ -119,7 +167,6 @@ async function disWeather(data){
                 humidityDisplay.textContent = "Humidity " + humid1 + "%";
                 card.appendChild(humidityDisplay)
 
-                console.log(data2.list[1]);
 
                 card2.textContent="";
                 card2.style.display="flex";
@@ -138,7 +185,6 @@ async function disWeather(data){
                     card2.appendChild(cityDisplay2)
 
                     var emoji2 =data2.list[1].weather[0].id;
-                    console.log(emoji2)
                     if (emoji2>= 200 && emoji2 < 300){
                         emoji2 = "⛈";
                     };
@@ -193,7 +239,6 @@ async function disWeather(data){
                             card3.textContent="";
                             card3.style.display="flex";
 
-                                console.log(data2.list);
                                 var day2 = data2.list[6].dt_txt;
                                 const dayDisplay2 = document.createElement("p");
                                 dayDisplay2.textContent= day2;
@@ -207,7 +252,6 @@ async function disWeather(data){
                                 card3.appendChild(cityDisplay3)
 
                                 var emoji3 =data2.list[6].weather[0].id;
-                                console.log(emoji3)
                                 if (emoji3>= 200 && emoji3 < 300){
                                     emoji3 = "⛈";
                                 };
@@ -276,7 +320,6 @@ async function disWeather(data){
                                             card4.appendChild(cityDisplay4)
 
                                             var emoji4 =data2.list[14].weather[0].id;
-                                            console.log(emoji4)
                                             if (emoji4>= 200 && emoji4 < 300){
                                                 emoji4 = "⛈";
                                             };
@@ -344,7 +387,6 @@ async function disWeather(data){
                                                             card5.appendChild(cityDisplay5)
 
                                                             var emoji5 =data2.list[30].weather[0].id;
-                                                            console.log(emoji5)
                                                             if (emoji5>= 200 && emoji5 < 300){
                                                                 emoji5 = "⛈";
                                                             };
@@ -411,7 +453,6 @@ async function disWeather(data){
                                                                         card6.appendChild(cityDisplay6)
 
                                                                         var emoji6 =data2.list[30].weather[0].id;
-                                                                        console.log(emoji6)
                                                                         if (emoji6>= 200 && emoji6 < 300){
                                                                             emoji6 = "⛈";
                                                                         };
@@ -440,12 +481,12 @@ async function disWeather(data){
                                                                         weatheremoji6.classList.add("Weather-emoji")
 
 
-                                                                        var temp13= data2.list[30].main.temp;
-                                                                        var temp14 =`${(temp13- 273.15) * 1.8 + 32}`;
-                                                                        let temp16= Number(temp14).toFixed(0);
+                                                                        var temp17= data2.list[30].main.temp;
+                                                                        var temp18 =`${(temp17- 273.15) * 1.8 + 32}`;
+                                                                        let temp19= Number(temp18).toFixed(0);
                                                                         const tempdisplay6 = document.createElement("p");
                                                                         card6.appendChild(tempdisplay6)
-                                                                        tempdisplay6.textContent= "Temperature " + temp16 + "°";
+                                                                        tempdisplay6.textContent= "Temperature " + temp19 + "°";
                                                                         tempdisplay6.classList.add("temp-dis")
 
 
@@ -459,11 +500,14 @@ async function disWeather(data){
                                                                         const humidityDisplay6 = document.createElement("p");
                                                                         humidityDisplay6.textContent = "Humidity " + humid6 + "%";
                                                                         card6.appendChild(humidityDisplay6)
-
+                
+                localStorage.setItem(city2,[lon,lat]);
+                                    
         });
     });
     
 }
+
 
 
 function disErr(message){

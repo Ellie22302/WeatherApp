@@ -7,7 +7,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color:#1c8ce7;
+    background-color:#ce8a25;
 }
 .search{
     display: flex;
@@ -21,7 +21,7 @@ body{
     border-radius: 10px;
 }
 .form{
-    background-color:#1c8ce7;
+    background-color:#ce8a25;
 }
 
 button[type="submit"]{
@@ -44,6 +44,7 @@ button[type="submit"]:hover{
     flex-direction: column;
     align-items: center;
     margin: 20px;
+    color: aliceblue;
 }
 
 .card2{
@@ -54,6 +55,7 @@ button[type="submit"]:hover{
     margin: 20px;
     flex-direction: column;
     position: relative;
+    color: aliceblue;
 }
 .card3{
     background: linear-gradient(180deg, rgb(53, 100, 202),rgb(47, 160, 117));
@@ -64,6 +66,7 @@ button[type="submit"]:hover{
     margin: 20px;
     flex-direction: column;
     position: relative;
+    color: aliceblue;
 }
 .card4{
     background: linear-gradient(180deg, rgb(53, 100, 202),rgb(47, 160, 117));
@@ -73,6 +76,7 @@ button[type="submit"]:hover{
     flex-direction: column;
     margin: 20px;
     position: relative;
+    color: aliceblue;
 }
 .card5{
     background: linear-gradient(180deg, rgb(53, 100, 202),rgb(47, 160, 117));
@@ -81,6 +85,7 @@ button[type="submit"]:hover{
     display: flex;
     flex-direction: column;
     margin: 20px;
+    color: aliceblue;
     
 }
 .card6{
@@ -90,6 +95,7 @@ button[type="submit"]:hover{
     display: flex;
     flex-direction: column;
     margin: 20px;
+    color: aliceblue;
     
 }
 h1{
