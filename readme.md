@@ -29,6 +29,9 @@ To use go to this website and type in a city, to view saved hit the history drop
 https://ellie22302.github.io/WeatherApp/
     
 ## Screenshots
+![Screenshot 2024-03-15 141830](https://github.com/Ellie22302/WeatherApp/assets/146311968/5c7e1360-9a75-4eb6-8f72-fa46f9a93bd5)
+![Screenshot 2024-03-15 141834](https://github.com/Ellie22302/WeatherApp/assets/146311968/78bc3363-83e3-4bac-afa9-d161872cc629)
+![Screenshot 2024-03-15 141824](https://github.com/Ellie22302/WeatherApp/assets/146311968/cdd1ffb3-6f90-45dd-88c8-d52fb4814b9b)
 
 
 
