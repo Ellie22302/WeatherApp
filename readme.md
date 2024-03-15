@@ -1,4 +1,6 @@
-https://stackoverflow.com/questions/19625646/javascript-adding-an-id-attribute-to-another-created-element
+https://ellie22302.github.io/WeatherApp/
+https://github.com/Ellie22302/WeatherApp/
+
 
 # Weather app
 
