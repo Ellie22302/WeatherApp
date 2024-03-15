@@ -104,7 +104,7 @@ window.onload=function history(){
 async function disWeather(data){
     var lat = data[0].lat;
     var lon = data[0].lon;
-    const url2= `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=3e5df3470637ae8ed92dfcd42bd58846`;
+    const url2= `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=3e5df3470637ae8ed92dfcd42bd58846`;
     await fetch(url2).then((response) => {
         console.log(response);
         response.json().then((data2) => {
